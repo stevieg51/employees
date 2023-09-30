@@ -18,7 +18,7 @@ export default function Employee(props) {
                             {props.role ? props.role : "No Role"}
                         </p>
                     </div>
-                    <MyModal id={props.id} name={props.name} role={props.role} updateEmployee={props.updateEmployee}/>
+                    {props.editEmployee}
                 </div>
             </div>
         </>

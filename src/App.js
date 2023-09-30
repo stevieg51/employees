@@ -3,6 +3,7 @@ import Employee from './components/Employee';
 import { useState } from 'react';
 import EmployeeCreator from './components/EmployeeCreator';
 import {v4 as uuidv4} from 'uuid';
+import MyModal from './components/MyModal';
 
 function App() {
   const [name, setName] = useState();
@@ -87,7 +88,8 @@ function App() {
  <div className=' h-screen  bg-teal-500'>
     <div className='flex flex-wrap justify-center '>
     {employees.map((employees) => {
-      return ( <Employee key={employees.id} id={employees.id} name={employees.name} role={employees.role} img={employees.img} updateEmployee={updateEmployee}></Employee> )
+      const editEmployee = <MyModal id={employees.id} name={employees.name} role={employees.role} updateEmployee={updateEmployee}/>
+      return ( <Employee key={employees.id} id={employees.id} name={employees.name} role={employees.role} img={employees.img} editEmployee={editEmployee}></Employee> )
 
     })}
     </div>
