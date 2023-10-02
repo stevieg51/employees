@@ -87,7 +87,7 @@ function Employees() {
   return (
  <>
 
- <div className=' min-h-screen  pt-1 bg-teal-500'>
+ <div >
     <div className='flex flex-wrap justify-center '>
     {employees.map((employees) => {
       const editEmployee = <MyModal id={employees.id} name={employees.name} role={employees.role} updateEmployee={updateEmployee}/>
